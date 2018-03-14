@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 import { MyHeroesComponent } from './heroes/heroes.component';
 import { AppComponent } from './app.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component'; // 相当于using，还没有声明使用
+import { HeroService } from './hero.service'; // 需要注入的服务
 
 
 @NgModule({
@@ -17,7 +18,7 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component'; // �
     BrowserModule,
     FormsModule, // <-- import the FormsModule before binding with [(ngModel)]
   ],
-  providers: [],
+  providers: [HeroService], // 需要注入使用的服务
   bootstrap: [MyHeroesComponent], // 通常是app启动的根组件
 })
 
