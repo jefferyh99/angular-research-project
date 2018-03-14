@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component'; // 相当于using，还没有声明使用
 import { HeroService } from './hero.service'; // 需要注入的服务
 import { MessagesComponent } from './messages/messages.component';
+import { MessageService } from './message.service';
 
 
 @NgModule({
@@ -20,7 +21,7 @@ import { MessagesComponent } from './messages/messages.component';
     BrowserModule,
     FormsModule, // <-- import the FormsModule before binding with [(ngModel)]
   ],
-  providers: [HeroService], // 需要注入使用的服务，如（@Injectable()）
+  providers: [HeroService, MessageService], // 需要注入使用的服务，如（@Injectable()）
   bootstrap: [MyHeroesComponent], // 通常是app启动的根组件
 })
 
