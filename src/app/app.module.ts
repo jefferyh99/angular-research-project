@@ -9,16 +9,16 @@ import { HeroService } from './hero.service'; // 需要注入的服务
 
 
 @NgModule({
-  declarations: [
+  declarations: [ // 通常是一些新组件的声明
     AppComponent, // 声明一下这个模版, HeroDetailComponen, HeroDetailComponentt内部成员，主要是声明自己写的
     MyHeroesComponent,
     HeroDetailComponent
   ],
-  imports: [
+  imports: [ // 通常是插入一些全局的可使用的标记方法，如[(ngModel)]
     BrowserModule,
     FormsModule, // <-- import the FormsModule before binding with [(ngModel)]
   ],
-  providers: [HeroService], // 需要注入使用的服务
+  providers: [HeroService], // 需要注入使用的服务，如（@Injectable()）
   bootstrap: [MyHeroesComponent], // 通常是app启动的根组件
 })
 
