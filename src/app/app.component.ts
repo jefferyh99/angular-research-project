@@ -15,8 +15,6 @@ export class Hero {
   <label>name: </label>
   <input [(ngModel)]="hero.name" placeholder="name">
   </div>`,
-  //templateUrl: './app.component.html',
-  //styleUrls: ['']
 })
 export class AppComponent {
   title = 'Tour of Heroes';
