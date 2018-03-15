@@ -1,3 +1,18 @@
 <h1>{{title}}</h1>
-<app-my-heroes></app-my-heroes>
+<nav>
+    <a routerLink="/heroes">Heroes</a>
+</nav>
+
+<!-- <app-my-heroes></app-my-heroes> -->
+
+<!--能在 AppComponent 中使用 RouterOutlet，是因为 AppModule 导入了 AppRoutingModule，而 AppRoutingModule 中导出了 RouterModule。-->
+<router-outlet></router-outlet>
+
+<!-- selector -->
 <app-messages></app-messages>
+
+<!-- html中可以得到的属性或标识，一定是
+    1、在对应的component中export的
+    2、在构造函数中的public属性注入的（服务）
+    3、在@NgModule中imports了其他的公共模块，这些公共模块代码中一定有一个exports了
+ -->
