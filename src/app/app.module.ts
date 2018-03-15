@@ -8,6 +8,7 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component'; // �
 import { HeroService } from './hero.service'; // 需要注入的服务
 import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './message.service';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { MessageService } from './message.service';
   imports: [ // 通常是插入一些全局的可使用的标记方法，如[(ngModel)]
     BrowserModule,
     FormsModule, // <-- import the FormsModule before binding with [(ngModel)]
+    AppRoutingModule,
   ],
   providers: [HeroService, MessageService], // 需要注入使用的服务，如（@Injectable()）
   bootstrap: [AppComponent], // 通常是app启动的根组件
