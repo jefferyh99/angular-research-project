@@ -11,7 +11,7 @@ import { HeroService } from '../hero.service';
   })
 
 export class MyHeroesComponent implements OnInit {
-    constructor(private heroService: HeroService) { } // 注入时，用的是Private
+    constructor(private heroService: HeroService) { } // 注入时，用的是Private，这样Html就拿不到该对象
 
     heroes: Hero[];
     selectedHero: Hero;
@@ -21,6 +21,7 @@ export class MyHeroesComponent implements OnInit {
     }
     onSelect(hero: Hero): void {
         this.selectedHero = hero;
+        this.clickHero(hero);
       }
     // getHeros(): void {
     //   this.heroes = this.heroService.getHeros();
@@ -29,6 +30,10 @@ export class MyHeroesComponent implements OnInit {
     getHeros(): void {
       this.heroService.getHeros().subscribe(heroes => this.heroes = heroes);
     } // 异步方法
+
+    clickHero(hero: Hero): void {
+      this.heroService.clickHero(hero);
+    }
 }
 
 

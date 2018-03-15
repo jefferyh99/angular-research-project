@@ -22,7 +22,7 @@ import { MessageService } from './message.service';
     FormsModule, // <-- import the FormsModule before binding with [(ngModel)]
   ],
   providers: [HeroService, MessageService], // 需要注入使用的服务，如（@Injectable()）
-  bootstrap: [MyHeroesComponent], // 通常是app启动的根组件
+  bootstrap: [AppComponent], // 通常是app启动的根组件
 })
 
 export class AppModule {
