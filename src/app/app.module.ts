@@ -9,10 +9,12 @@ import { HeroService } from './hero.service'; // 需要注入的服务
 import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './message.service';
 import { AppRoutingModule } from './app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [ // 通常是一些新组件的声明
-    AppComponent, // 声明一下这个模版, HeroDetailComponen, HeroDetailComponent内部成员，主要是声明自己写的,
+    AppComponent, // 声明一下这个模版, HeroDetailComponen, HeroDetailComponent内部成员,主要是声明自己写的,
+    DashboardComponent,
     MessagesComponent,
     MyHeroesComponent,
     HeroDetailComponent

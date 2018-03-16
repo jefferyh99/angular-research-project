@@ -1,11 +1,14 @@
 <h1>{{title}}</h1>
+<!--导航栏-->
 <nav>
+    <a routerLink="/dashboard">dashboard</a>
     <a routerLink="/heroes">Heroes</a>
 </nav>
 
 <!-- <app-my-heroes></app-my-heroes> -->
 
 <!--能在 AppComponent 中使用 RouterOutlet，是因为 AppModule 导入了 AppRoutingModule，而 AppRoutingModule 中导出了 RouterModule。-->
+<!--视图-->
 <router-outlet></router-outlet>
 
 <!-- selector -->

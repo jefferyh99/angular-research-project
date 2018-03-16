@@ -17,8 +17,10 @@ export class MyHeroesComponent implements OnInit {
     selectedHero: Hero;
 
     ngOnInit(): void {
-      this.getHeros();
+      this.getHeroes();
     }
+
+    // Remove dead code
     onSelect(hero: Hero): void {
         this.selectedHero = hero;
         this.clickHero(hero);
@@ -27,8 +29,8 @@ export class MyHeroesComponent implements OnInit {
     //   this.heroes = this.heroService.getHeros();
     // } //同步方法（服务器能立即返回英雄数组或者浏览器能在等待服务器响应时冻结界面才能如此使用）
 
-    getHeros(): void {
-      this.heroService.getHeros().subscribe(heroes => this.heroes = heroes);
+    getHeroes(): void {
+      this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes);
     } // 异步方法
 
     clickHero(hero: Hero): void {
