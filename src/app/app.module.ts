@@ -11,18 +11,38 @@ import { MessageService } from './message.service';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
+import {HttpClientModule} from '@angular/common/http'; // httpclient 服务
+
+// 模拟webapi
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+// 模拟webapi 数据
+import { InMemoryDataService } from './services/in-memory-data.service';
+import { delay } from 'rxjs/operators';
+
+import { environment } from '../environments/environment';
+
 @NgModule({
   declarations: [ // 通常是一些新组件的声明
     AppComponent, // 声明一下这个模版, HeroDetailComponen, HeroDetailComponent内部成员,主要是声明自己写的,
     DashboardComponent,
     MessagesComponent,
     MyHeroesComponent,
-    HeroDetailComponent
+    HeroDetailComponent,
   ],
   imports: [ // 通常是插入一些全局的可使用的标记方法，如[(ngModel)]
     BrowserModule,
     FormsModule, // <-- import the FormsModule before binding with [(ngModel)]
     AppRoutingModule, // AppModule imports AppRoutingModule which exported RouterModule.
+    HttpClientModule,
+
+    // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
+    // and returns simulated server responses.
+    // Remove it when a real server is ready to receive requests.
+    environment.production ? [] : HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService,
+      { dataEncapsulation: false,
+        caseSensitiveSearch: true,
+        delay: 1000
+      }),
   ],
   providers: [HeroService, MessageService], // 需要注入使用的服务，如（@Injectable()）
   bootstrap: [AppComponent], // 通常是app启动的根组件

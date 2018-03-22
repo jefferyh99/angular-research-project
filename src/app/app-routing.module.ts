@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: 'heroes', component: MyHeroesComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'detail/:id', component: HeroDetailComponent }, // （:）表示 :id 是一个占位符，它表示某个特定英雄的 id
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' }, // 默认路由
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full'}, // 默认路由
 ];
 
 @NgModule({

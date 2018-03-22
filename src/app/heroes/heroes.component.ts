@@ -36,6 +36,22 @@ export class MyHeroesComponent implements OnInit {
     clickHero(hero: Hero): void {
       this.heroService.clickHero(hero);
     }
+
+    add(name: string): void {
+      name = name.trim();
+      if (!name) { return; }
+      this.heroService.addHero({ name } as Hero)
+        .subscribe(hero => {
+          this.heroes.push(hero);
+        });
+    }
+
+    delete(hero: Hero): void {
+      // 删除heroes的绑定
+      this.heroes = this.heroes.filter(h => h !== hero);
+      this.heroService.deleteHero(hero).subscribe();
+      // 重要：如果你忘了调用 subscribe()，本服务将不会把这个删除请求发送给服务器。 作为一条通用的规则，Observable 在有人订阅之前什么都不会做。
+    }
 }
 
 
