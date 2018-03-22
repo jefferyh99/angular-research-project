@@ -21,9 +21,14 @@ import { delay } from 'rxjs/operators';
 
 import { environment } from '../environments/environment';
 
+import { HeroSearchComponent } from './hero-search/hero-search.component';
+
+
+
 @NgModule({
   declarations: [ // 通常是一些新组件的声明
-    AppComponent, // 声明一下这个模版, HeroDetailComponen, HeroDetailComponent内部成员,主要是声明自己写的,
+    AppComponent, // 声明一下这个模版, HeroDetailComponen, HeroDetailComponent内部成员,主要是申明自己写,
+    HeroSearchComponent,
     DashboardComponent,
     MessagesComponent,
     MyHeroesComponent,
