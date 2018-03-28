@@ -1,0 +1,3 @@
+创建类：
+ng generate class hero
+

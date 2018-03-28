@@ -43,6 +43,8 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
+
+    // 这边的forRoot，相当于即使调用forRoot中的方法，forRoot实现ModuleWithProviders接口，相当于把forRoot里面Provider的service注入进来
     environment.production ? [] : HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService,
       { dataEncapsulation: false,
         caseSensitiveSearch: true,
