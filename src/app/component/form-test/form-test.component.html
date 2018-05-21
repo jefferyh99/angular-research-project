@@ -1,0 +1,26 @@
+<form (ngSubmit)="save(signupForm)" #signupForm="ngForm">
+    <div>
+      <label>
+        <span>用户名</span>
+        <input type="text" name="userName"
+          placeholder="请输入用户名"
+          required minlength="3"
+          [(ngModel)]="user.userName"
+          #userName="ngModel" #userObj>
+      </label>
+      <div *ngIf="userName.touched && userName.errors?.required">
+        用户名是必填项
+      </div>
+      <div *ngIf="userName.touched && userName.errors?.minlength">
+        用户名的长度必须大于3
+      </div>
+    </div>
+    <button type="submit" (click)="click(userObj,signupForm,userName)">注册</button>
+  </form>
+  <div>className:</div>
+  <div>{{userObj.className}}</div>
+  <div>ngForm:</div>
+  <div>{{signupForm}}</div>
+  <div>ngModel:</div>
+  <div>{{userName}}</div>
+

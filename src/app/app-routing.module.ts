@@ -31,7 +31,11 @@ const routes: Routes = [
   ],
   // RouterModule.forRoot(routes)
   // Create a module with all the router providers and directives
-  imports: [ RouterModule.forRoot(routes) ],
+  // forRoot定义静态的共享模块
+  imports: [ RouterModule.forRoot(
+    routes,
+  { enableTracing: true } // <-- debugging purposes only
+  ) ],
 
 })
 

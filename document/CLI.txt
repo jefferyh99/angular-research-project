@@ -1,5 +1,33 @@
 创建类：
 ng generate class hero
 
+****帮助
+ng generate pipe --help
 
+ng g 
+cl:class  类
+c:component  组件
+d:directive  指令
+e:enum  枚举
+m:module  模块
+p:pipe  管道
+s:service  服务
 
+//装cnpm
+npm i -g cnpm
+
+//装脚手架
+cnpm i -g @angular/cli
+
+//新建项目
+ng new 项目名称 
+
+//在项目的第一级目录下执行，下载所需要的包
+cnpm install
+
+//启动；
+ng serve
+
+路由模块 ng generate module app-routing --flat --module=app-routing.module
+--flat 不生成新的文件夹
+--module（指定引入的module，在哪里import）
