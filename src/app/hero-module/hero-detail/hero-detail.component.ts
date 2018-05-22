@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { Hero } from '../app.component';
+import { Hero } from 'typings/Heroes/hero';
 
 // 导航路由
 import { ActivatedRoute } from '@angular/router';

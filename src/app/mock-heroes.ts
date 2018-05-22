@@ -1,4 +1,4 @@
-import { Hero } from './app.component';
+import { Hero } from 'typings/Heroes/hero';
 
 export const HEROES: Hero[] = [
     { id: 11, name: 'Mr. Nice' },

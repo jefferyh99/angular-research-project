@@ -10,8 +10,5 @@ export class AppComponent {
   title = 'AppComponent';
 }
 
-export class Hero {
-  id: number;
-  name: string;
-}
+
 

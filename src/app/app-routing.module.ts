@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { MyHeroesComponent } from './heroes/heroes.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+// // import { MyHeroesComponent } from './heroes/heroes.component';
+// import { DashboardComponent } from './dashboard/dashboard.component';
+// import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
-  { path: 'heroes', component: MyHeroesComponent },
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'detail/:id', component: HeroDetailComponent }, // （:）表示 :id 是一个占位符，它表示某个特定英雄的 id
+  // { path: 'heroes', component: MyHeroesComponent },
+  // { path: 'dashboard', component: DashboardComponent },
+  // { path: 'detail/:id', component: HeroDetailComponent }, // （:）表示 :id 是一个占位符，它表示某个特定英雄的 id
   { path: '', redirectTo: '/dashboard', pathMatch: 'full'}, // 默认路由
   { path: '**' , component: PageNotFoundComponent}
 ];
