@@ -26,13 +26,15 @@ import { environment } from 'environments/environment';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 
 import { SharedModule } from './shared/shared.module';
-import { FormTestComponent } from './component/form-test/form-test.component';
+import { FormTestComponent} from './component/form-test/form-test.component'
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
   declarations: [ // 通常是一些新组件的声明,//组件、指令和管道
     AppComponent, // 声明一下这个模版, HeroDetailComponen, HeroDetailComponent内部成员,主要是申明自己写的
     FormTestComponent,
+    PageNotFoundComponent,
     HeroSearchComponent,
     DashboardComponent,
     MessagesComponent,
