@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 // import { HeroDetailComponent } from './hero-detail/hero-detail.component'; // 相当于using，还没有声明使用
 // import { HeroService } from './hero-module/hero.service'; // 需要注入的服务
 import { MessagesComponent } from './messages/messages.component';
-import { MessageService } from './message.service';
+import { MessageService } from './messages/message.service';
 import { AppRoutingModule } from './app-routing.module';
 // import { DashboardComponent } from './dashboard/dashboard.component';
 

@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { HEROES } from 'app/mock-heroes';
+import { HEROES } from './mock-heroes';
 import { Hero } from 'typings/Heroes/hero';
 
 import { Observable } from 'rxjs/Observable'; // HttpClient.get() 会返回 Observable,可观察类型，因为是http请求需要异步返回，因此需要回调（Call Back）函数
 import { of } from 'rxjs/observable/of';
 
-import { MessageService } from 'app/message.service';
+import { MessageService } from 'app/messages/message.service';
 
 
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http'; // http服务
