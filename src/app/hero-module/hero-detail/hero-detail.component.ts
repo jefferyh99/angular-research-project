@@ -1,9 +1,12 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { Hero } from 'typings/Heroes/hero';
+import { Hero } from 'app/hero';
 
 // 导航路由
-import { ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+
+// 处理可观察对象
+import { switchMap } from 'rxjs/operators';
 
 // angular 与浏览器打交道
 import { Location } from '@angular/common';
@@ -25,7 +28,8 @@ export class HeroDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private heroService: HeroService,
-    private location: Location
+    private location: Location,
+    private router: Router
   ) {}
 
   // @Input() hero: Hero;
@@ -41,9 +45,18 @@ export class HeroDetailComponent implements OnInit {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     // const id = + this.route.snapshot.paramMap.get('id');
 
+
     this.heroService.getHero(id)
       .subscribe(hero => {
           this.hero = hero;
+          console.log(hero);
+        });
+
+        const hero$ = this.route.paramMap.pipe(
+          switchMap((params: ParamMap) =>
+            this.heroService.getHero(Number(params.get('id'))))
+        );
+        hero$.subscribe(hero => {
           console.log(hero);
         });
   }

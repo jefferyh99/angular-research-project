@@ -30,6 +30,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 import { HeroModuleModule } from './hero-module/hero-module.module';
 
+import { CrisisCenterModule } from './CrisisCenter/crisis-center.module';
+
 
 @NgModule({
   declarations: [ // 通常是一些新组件的声明,//组件、指令和管道
@@ -47,6 +49,7 @@ import { HeroModuleModule } from './hero-module/hero-module.module';
    FormsModule, // <-- import the FormsModule before binding with [(ngModel)]
    HttpClientModule,
    SharedModule,
+   CrisisCenterModule,
 
    HeroModuleModule, // 子路由，一定要在主路由前面配置
    AppRoutingModule, // AppModule imports AppRoutingModule which exported RouterModule.
